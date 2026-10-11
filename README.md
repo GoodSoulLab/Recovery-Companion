@@ -21,11 +21,14 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Prototype privacy threat model v0.1](docs/research/PRIVACY_THREAT_MODEL_v0.1.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Staged review commission plan v0.1](docs/research/STAGED_REVIEW_COMMISSION_PLAN_v0.1.md)
-- [Reviewer and formative test protocol v0.2](docs/research/REVIEW_PROTOCOL_v0.2.md)
-- [Reviewer and formative test packet v0.1 (superseded draft)](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Reviewer and formative test protocol v0.4 (current draft)](docs/research/REVIEW_PROTOCOL_v0.4.md)
+- [Reviewer and formative test protocol v0.3 (superseded)](docs/research/REVIEW_PROTOCOL_v0.3.md)
+- [Reviewer and formative test protocol v0.2 (superseded)](docs/research/REVIEW_PROTOCOL_v0.2.md)
+- [Reviewer and formative test packet v0.1 (superseded)](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Context selector prototype v0.6 (current)](prototype/context-selector-v0.6.html)
+- [UX simplification notes v0.2](docs/design/UX_SIMPLIFICATION_NOTES_v0.2.md)
 - [Context selector prototype v0.5](prototype/context-selector-v0.5.html)
-- [UX simplification notes v0.1](docs/design/UX_SIMPLIFICATION_NOTES_v0.1.md)
-- [Reviewer and formative test protocol v0.3](docs/research/REVIEW_PROTOCOL_v0.3.md)
+- [UX simplification notes v0.1 (superseded)](docs/design/UX_SIMPLIFICATION_NOTES_v0.1.md)
 - [Context selector prototype v0.4](prototype/context-selector-v0.4.html)
 - [Context selector prototype v0.3](prototype/context-selector-v0.3.html)
 - [Context selector prototype v0.2](prototype/context-selector-v0.2.html)
@@ -43,7 +46,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-Prototype v0.5 replaces the filter-heavy first screen with one self-chosen moment, two fixed starter drafts, an explicit explanation, and optional expansion or full browsing. The static toolkit remains available with the same 12 draft exercises. This is a design hypothesis: fewer simultaneous choices may reduce friction, while the starter pair may introduce selection bias or feel overly directive. The two cards are fixed mappings, not learned or ranked recommendations. Source checks confirm one HTML document, 12 draft exercises, valid JavaScript syntax, and no page-level network or browser-storage APIs; these checks do not establish rendered accessibility, usability, clinical fit, privacy of the host, or benefit. No reviewers or participants have been contacted. Protocol v0.3 remains a draft. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
+Prototype v0.6 keeps the one-moment entry and two fixed, explainable starter drafts, with a warmer visual system, clearer hierarchy, subtle interaction feedback, and a separate browse-all route. The 12 draft exercises remain unchanged. The intended feel is considered and human without recovery streaks, pressure, or treatment-like authority. These are design proposals, not validated conclusions. The starter pair can bias choices or feel too directive; the richer visual treatment can also imply more authority than the unreviewed content merits. Source checks confirm one HTML document, 12 draft exercises, valid JavaScript syntax, and no page-level network or browser-storage APIs. Browser rendering, keyboard, zoom/reflow, and screen-reader review remain unverified. No reviewers or participants have been contacted. Protocol v0.4 remains a draft. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
 
 ## Licensing
 
