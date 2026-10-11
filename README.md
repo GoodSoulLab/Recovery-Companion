@@ -34,7 +34,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. The next safe step is an internal synthetic coverage test of the selector and local-only behavior; no reviewer or participant spend is needed for that work. The prototype still contains unreviewed draft exercises and preselected defaults, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
+A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. The internal synthetic coverage test is complete and found that “Browse all” returns only three of twelve cards and some filter combinations return no options. The next safe step is to correct these mechanics and verify local-only behavior; no reviewer or participant spend is needed for that work. The prototype still contains unreviewed draft exercises and preselected defaults, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
 
 ## Licensing
 
