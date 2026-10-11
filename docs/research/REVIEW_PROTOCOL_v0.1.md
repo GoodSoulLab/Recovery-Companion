@@ -1,3 +1,5 @@
+> **Superseded draft:** This v0.1 packet points to prototype v0.1 and uses earlier study thresholds. Use [Reviewer and Formative Test Protocol v0.2](REVIEW_PROTOCOL_v0.2.md) for the current prototype, pre-exposure gates, and falsification rule. The v0.1 file is retained as a historical record.
+
 # Recovery Companion — Reviewer and Formative Test Packet v0.1
 
 **Date:** 2026-10-11  
