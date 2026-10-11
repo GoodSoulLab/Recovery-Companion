@@ -20,6 +20,7 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
 - [Prototype privacy threat model v0.1](docs/research/PRIVACY_THREAT_MODEL_v0.1.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
+- [Staged review commission plan v0.1](docs/research/STAGED_REVIEW_COMMISSION_PLAN_v0.1.md)
 - [Reviewer and formative test protocol v0.2](docs/research/REVIEW_PROTOCOL_v0.2.md)
 - [Reviewer and formative test packet v0.1 (superseded draft)](docs/research/REVIEW_PROTOCOL_v0.1.md)
 - [Context selector prototype v0.4](prototype/context-selector-v0.4.html)
