@@ -51,7 +51,7 @@ Request a fixed fee for document review, one 45–60 minute discussion, and one 
 
 Invite two adults who independently self-identify relevant lived experience and voluntarily sought behavior change. Seek different goals and perspectives; do not require diagnosis, abstinence, a recovery label, testimonials, or disclosure of personal histories. Do not identify or approach people through private support-group membership.
 
-Offer separate separate private sessions or a written-feedback route; explain confidentiality limits before participation. Avoid a group session for the first review so that partners are not asked to hear one another’s personal context. Each person may review the same exact materials and comment on:
+Offer separate private sessions or a written-feedback route; explain confidentiality limits before participation. Avoid a group session for the first review so that partners are not asked to hear one another’s personal context. Each person may review the same exact materials and comment on:
 
 - wording that feels blaming, pressuring, confusing, or falsely reassuring;
 - whether options feel rejectable and whether “none” remains a valid choice;
