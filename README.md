@@ -23,6 +23,9 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Staged review commission plan v0.1](docs/research/STAGED_REVIEW_COMMISSION_PLAN_v0.1.md)
 - [Reviewer and formative test protocol v0.2](docs/research/REVIEW_PROTOCOL_v0.2.md)
 - [Reviewer and formative test packet v0.1 (superseded draft)](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Context selector prototype v0.5](prototype/context-selector-v0.5.html)
+- [UX simplification notes v0.1](docs/design/UX_SIMPLIFICATION_NOTES_v0.1.md)
+- [Reviewer and formative test protocol v0.3](docs/research/REVIEW_PROTOCOL_v0.3.md)
 - [Context selector prototype v0.4](prototype/context-selector-v0.4.html)
 - [Context selector prototype v0.3](prototype/context-selector-v0.3.html)
 - [Context selector prototype v0.2](prototype/context-selector-v0.2.html)
@@ -40,7 +43,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-Prototype v0.4 makes situation the primary choice and moves time, kind, and approach into optional refinements. A 192-combination synthetic sweep found increasing empty-result rates as constraints were stacked, which motivated this progressive design. Synthetic checks show 12/12 cards with neutral and Browse all settings, two support options in each view, and non-overlapping time bands. These are mechanics checks, not evidence of usability, clinical fit, or benefit. No rendered-browser or screen-reader review, independent review, participant test, or authenticated competitor walkthrough is claimed. The current reviewer/test protocol is v0.2 and remains a draft; no reviewers or participants have been contacted. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
+Prototype v0.5 replaces the filter-heavy first screen with one self-chosen moment, two fixed starter drafts, an explicit explanation, and optional expansion or full browsing. The static toolkit remains available with the same 12 draft exercises. This is a design hypothesis: fewer simultaneous choices may reduce friction, while the starter pair may introduce selection bias or feel overly directive. The two cards are fixed mappings, not learned or ranked recommendations. Source checks confirm one HTML document, 12 draft exercises, valid JavaScript syntax, and no page-level network or browser-storage APIs; these checks do not establish rendered accessibility, usability, clinical fit, privacy of the host, or benefit. No reviewers or participants have been contacted. Protocol v0.3 remains a draft. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
 
 ## Licensing
 
