@@ -82,6 +82,22 @@ Run an internal, reproducible **synthetic coverage test** before spending on par
 
 This can falsify poor retrieval mechanics and quantify coverage. It **cannot** show that recommendations are clinically appropriate or useful to people; no participant claim follows.
 
+### Synthetic coverage run on v0.1
+
+I ran the existing prototype’s rule logic against the actual 12-card registry, reproducing its eligibility filters and first-three cap. This was a code-path check with synthetic inputs only; it did not execute participant content in a study or judge clinical fit.
+
+| Synthetic input | Current output | Finding |
+|---|---|---|
+| Default form: urge / a few minutes / practical / no approach preference | C01, C04, C05 | The form’s preselected values shape the result before the user has actively chosen them. |
+| Browse all / no other filters | C01, C02, C03 | Returns 3 of 12 cards; “Browse all” in the selector does not actually show the library. |
+| Urge / no other filters | C01, C02, C03 | Returns 3 of 10 eligible cards in registry order; several eligible alternatives are hidden without an explanation that the list was capped. |
+| Setback / default time and style | C08, C11 | A result appears, but the output is determined by the practical default. |
+| Setback / reflective / a few minutes | No matches | C06 and C07 exceed the time threshold; the UI asks the user to loosen filters rather than surfacing a clearer route. |
+| Urge / person / human connection | C09, C12 | Human support appears only when the user selects both matching filters. |
+| Urge / person / values/acceptance approach | No matches | The interface allows incompatible filters and then produces an empty set. |
+
+**Result:** the current selector implementation fails its own “browse all” expectation and can hide options based on default filters and content order. Correct these mechanics before considering a participant comparison: make defaults neutral/optional, ensure browse-all truly exposes all cards, keep support/exit visible, explain when a filter narrows choices, and do not imply the first three items are the best fit. The static toolkit remains the safer and clearer prototype condition until this is fixed.
+
 ### Smallest meaningful user test (after review gates)
 
 If the synthetic screen passes and exact content receives qualified review, run a formative within-person comparison with 8–12 adults who voluntarily identify a behavior-change goal. Use identical reviewed cards in a curated static index and the transparent selector; counterbalance condition order and use task-matched, non-graphic scenarios to reduce learning effects. Do not collect diagnoses, explicit histories, free-text journals, or longitudinal behavior data.
@@ -92,7 +108,7 @@ Measure time to an acceptable option, independent fit rating, ability to explain
 
 ## Decision gates
 
-1. **Now:** finish synthetic coverage, local privacy checks, and public competitor evidence. No reviewer or participant spend required.
+1. **Now:** correct the selector defects recorded above, then verify local-only behavior and accessibility. This can proceed without reviewer or participant spend.
 2. **Before exposure:** obtain qualified clinical and lived-experience review of exact cards, scenario prompts, consent/debrief, stop rules, and resource language; complete privacy, IP, accessibility, and ethics determination.
 3. **After the small test:** advance only if there is a clear directional fit or time advantage with preserved agency and no concerning harm signal. If not, prefer a static index, human-support navigation, or no product.
 4. **Commercial thesis:** remain unproven. Do not infer demand, retention, willingness to pay, clinical impact, or venture viability from a site teardown or usability test.
