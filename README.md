@@ -18,6 +18,7 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Competitive evidence matrix v0.1](docs/research/COMPETITIVE_EVIDENCE_MATRIX_v0.1.md)
 - [Decision memo v0.1](docs/research/DECISION_MEMO_v0.1.md)
 - [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
+- [Prototype privacy threat model v0.1](docs/research/PRIVACY_THREAT_MODEL_v0.1.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Reviewer and formative test packet v0.1](docs/research/REVIEW_PROTOCOL_v0.1.md)
 - [Context selector prototype v0.3](prototype/context-selector-v0.3.html)
