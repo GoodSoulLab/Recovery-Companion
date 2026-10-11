@@ -125,6 +125,14 @@ If the synthetic screen passes and exact content receives qualified review, run 
 
 Measure time to an acceptable option, independent fit rating, ability to explain the selector and reject it, perceived agency, privacy comprehension, and shame/distress or other adverse reactions. Treat small-sample results as directional usability evidence, never clinical efficacy evidence.
 
+#### Precommitted decision rule and scope
+
+This comparison tests only whether the selector improves access to an acceptable next step. It does not test whether a person applies the step outside the session, improves behavior-change outcomes, or benefits clinically. A pass would justify only a later, separately reviewed feasibility test of trying a reviewed micro-step; it would not validate the product thesis or justify forming a company.
+
+Use a small, counterbalanced within-person comparison: each participant completes two non-graphic scenario tasks in each condition, using matched scenario sets and varied condition/order assignment to reduce practice effects. Include the same reviewed cards in both conditions. The primary outcome is paired time to an acceptable choice; participants may instead choose “none of these,” which counts as a valid agency-preserving response. Also collect a brief fit rating, whether they can explain the match or why nothing fits, and short agency, burden, and privacy-comprehension ratings. Do not collect behavior histories, diagnoses, free-text accounts, audio/video, or longitudinal data.
+
+Treat 8 completed participants as a kill-screen, not a powered efficacy study. Before starting, define a directional pass as at least 20% lower median time in the selector, with fit no more than 0.5 points worse on a 5-point scale and no repeated pattern of greater burden, reduced agency, or privacy misunderstanding. If that signal is absent or mixed after eight, retain the static index or stop; extend to at most 12 only to resolve a promising but ambiguous pattern. Pause or stop for concerning distress or a privacy/safety misunderstanding. These thresholds are decision aids for this formative screen, not validated clinical cutoffs.
+
 **Falsify the selector thesis** if static browsing is as fast or faster with similar fit, people prefer the index, the selector’s questions feel intrusive or burdensome, or users cannot explain why an option appeared. Keep a static resource or stop; do not build a company around a mechanism that fails its comparison.
 
 ## Decision gates
