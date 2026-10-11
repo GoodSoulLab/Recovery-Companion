@@ -1,7 +1,7 @@
 # Reviewer sourcing brief v0.1
 
 **Prepared:** 2026-10-11  
-**Status:** Desk research only. No one has been contacted or endorsed.  
+**Status:** Desk research only. No one has been contacted or endorsed. The current study artifact is prototype v0.4; see [Reviewer and Formative Test Protocol v0.2](REVIEW_PROTOCOL_v0.2.md) for the aligned test gates and decision rule.  
 **Purpose:** Identify the smallest qualified review group for the expert-only prototype and clarify what public credentials do and do not establish.
 
 ## Decision
@@ -12,7 +12,7 @@ Do not treat an academic subject-matter review as clinical safety approval. Befo
 2. **Two to four paid lived-experience partners** with varied goals and perspectives, recruited by opt-in invitation. They review usability, language, burden, agency, and perceived safety; they are not asked to disclose histories or certify clinical safety.
 3. **A product/research owner** who records disagreement and resolves copy changes before testing. A clinician’s review does not replace ethics review where research regulations apply.
 
-The public profiles below are a shortlist for possible *subject-matter consultation*, not a recommendation to appoint any person as the treating clinician, safety officer, or sole authority. Their availability, fees, current clinical practice, conflicts, and willingness are unknown. Verify each directly before an invitation.
+The public profiles below are a shortlist for possible *subject-matter consultation*, not a recommendation to appoint any person as the treating clinician, safety officer, or sole authority. Clinical and lived-experience review are only part of the pre-exposure gates: the exact build also needs privacy/security and accessibility review, an IP/provenance check, and a documented ethics determination. These are separate functions; one reviewer’s approval does not satisfy them all. Their availability, fees, current clinical practice, conflicts, and willingness are unknown. Verify each directly before an invitation.
 
 ## Potential subject-matter reviewers
 
@@ -70,7 +70,7 @@ PCORI’s engagement standards call for representative involvement, early and on
 - The current prototype is concept material for expert review only. It is not a clinical intervention, validated assessment, or participant-facing study instrument.
 - No clinical claim, safety claim, treatment recommendation, or efficacy claim follows from this desk research.
 - The candidate list is based on public professional profiles, not personal contact, private data, or a conflict investigation.
-- Reviewer feedback can guide a revision. It cannot substitute for qualified governance, security/privacy review, ethics determination, or a properly designed falsification experiment.
+- Reviewer feedback can guide a revision. It cannot substitute for the separate privacy/security and accessibility reviews, IP/provenance check, ethics determination, or a properly designed falsification experiment.
 - Keep participant recruitment and sensitive research on hold until the review protocol and governance are accepted by qualified reviewers.
 - This repository is public and MIT-licensed. This brief intentionally contains only public professional facts and process guidance. Do not place reviewer contact details, private correspondence, compensation terms, or participant data here.
 
