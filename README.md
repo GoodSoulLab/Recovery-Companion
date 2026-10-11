@@ -17,6 +17,8 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Product requirements v0.1](docs/product/PRD_v0.1.md)
 - [Competitive evidence matrix v0.1](docs/research/COMPETITIVE_EVIDENCE_MATRIX_v0.1.md)
 - [Decision memo v0.1](docs/research/DECISION_MEMO_v0.1.md)
+- [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
+- [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Reviewer and formative test packet v0.1](docs/research/REVIEW_PROTOCOL_v0.1.md)
 - [Context selector prototype v0.1](prototype/context-selector-v0.1.html)
 
@@ -32,7 +34,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-The prototype and review protocol are drafts. The next required gate is qualified clinical and lived-experience review of exact user-facing content and research safeguards. Direct competitor app walkthroughs and independent privacy/security review are also outstanding.
+A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. The next safe step is an internal synthetic coverage test of the selector and local-only behavior; no reviewer or participant spend is needed for that work. The prototype still contains unreviewed draft exercises and preselected defaults, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
 
 ## Licensing
 
