@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Recovery Companion — Concept Prototype</title>
+<style>
+:root{
+ --ink:#202821;--ink-soft:#445148;--muted:#6b776e;--paper:#f3f1eb;--surface:#fffefa;
+ --line:#d9ddd5;--line-strong:#b9c2b8;--forest:#315847;--forest-deep:#254637;
+ --forest-wash:#e9eee8;--clay:#bd654a;--clay-wash:#f6ebe4;--amber:#755019;--amber-wash:#fbf3e4;
+ --focus:#a74831;--shadow:0 18px 44px rgba(30,43,34,.055);
+ --serif:Georgia,"Times New Roman",serif;
+ --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ color-scheme:light;font-family:var(--sans)
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}
+button,select{font:inherit}
+button{color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 34px 72px}
+.mast{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:var(--ink);text-decoration:none;font-size:.97rem;font-weight:700;letter-spacing:-.02em}
+.brand-mark{width:30px;height:30px;border:1.5px solid var(--forest);border-radius:50%;display:grid;place-items:center;position:relative}
+.brand-mark:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--clay);display:block}
+.brand-copy{display:grid;gap:2px}
+.brand-copy small,.eyebrow,.micro-label{font-size:.68rem;line-height:1.25;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+.brand-copy small{color:var(--muted);letter-spacing:.11em}
+.status{display:inline-flex;align-items:center;gap:8px;color:#624418;background:var(--amber-wash);border:1px solid #e7d7b5;border-radius:3px;padding:7px 10px;font-size:.69rem;line-height:1.2;letter-spacing:.08em;text-transform:uppercase;font-weight:750}
+.status:before{content:"";width:6px;height:6px;border-radius:50%;background:#a97931}
+.intro{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.72fr);align-items:end;gap:48px;padding:60px 0 38px}
+.eyebrow{margin:0 0 17px;color:var(--forest);display:flex;align-items:center;gap:9px}
+.eyebrow:before{content:"";height:1px;width:24px;background:var(--clay)}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.15rem,6.5vw,5.25rem);line-height:.99;letter-spacing:-.055em;margin:0 0 21px;max-width:720px}
+h1 em{font-weight:400;color:var(--forest);font-style:italic}
+.lede{font-size:1.08rem;color:var(--ink-soft);line-height:1.65;max-width:590px;margin:0}
+.principle{padding:20px 0 3px 21px;border-left:1px solid var(--line-strong);max-width:330px;margin-bottom:5px}
+.principle .micro-label{color:var(--muted);display:block;margin-bottom:11px}
+.principle p{font-family:var(--serif);font-size:1.43rem;line-height:1.22;letter-spacing:-.02em;margin-bottom:12px}
+.principle small{font-size:.82rem;color:var(--muted)}
+.alert{display:flex;gap:13px;align-items:flex-start;padding:14px 17px;background:var(--amber-wash);border:1px solid #eadfc9;border-left:3px solid #aa7831;border-radius:3px;color:#624d2b;margin:0 0 26px;font-size:.83rem;line-height:1.5}
+.alert strong{color:#4d391e}
+.alert-mark{flex:0 0 19px;height:19px;border:1px solid #b8904f;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;margin-top:1px}
+.tabs{display:inline-flex;gap:4px;padding:4px;background:#e8e7e0;border:1px solid #dcddd5;border-radius:7px;margin-bottom:16px}
+.tabs button{border:1px solid transparent;background:transparent;color:var(--muted);font-size:.86rem;font-weight:650;padding:10px 18px;border-radius:4px;cursor:pointer;transition:background .16s ease,color .16s ease,border-color .16s ease}
+.tabs button[aria-selected="true"]{background:var(--surface);border-color:#e2e3dc;color:var(--ink);box-shadow:0 2px 5px rgba(30,43,34,.05)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow);padding:30px 32px;margin-bottom:18px}
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
+.panel-head h2{font-family:var(--serif);font-size:2rem;font-weight:400;letter-spacing:-.035em;line-height:1.12;margin:3px 0 8px}
+.sub{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0;max-width:670px}
+.panel-index{font-family:var(--serif);font-size:1.18rem;color:#a2aaa1;padding-top:3px}
+.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{min-width:0}
+.field label,.field legend{display:block;font-size:.77rem;line-height:1.3;letter-spacing:.035em;color:var(--ink-soft);font-weight:720;margin-bottom:7px}
+.field select{appearance:none;width:100%;min-height:50px;padding:12px 42px 12px 14px;border:1px solid var(--line-strong);border-radius:5px;background-color:#fffefa;color:var(--ink);font-size:.9rem;line-height:1.35;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='m3 5 4 4 4-4' fill='none' stroke='%23315847' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
+.field select:hover{border-color:#7f9184}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:22px}
+.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;min-height:46px;padding:11px 17px;border:1px solid var(--forest);border-radius:4px;background:var(--forest);color:#fffefa;font-size:.85rem;font-weight:680;line-height:1.2;cursor:pointer;transition:background .16s ease,border-color .16s ease,transform .16s ease}
+.button:hover{background:var(--forest-deep);border-color:var(--forest-deep)}
+.button:active{transform:translateY(1px)}
+.button.secondary{background:transparent;color:var(--forest)}
+.button.secondary:hover{background:var(--forest-wash)}
+.button.quiet{background:transparent;border-color:transparent;color:var(--ink-soft);text-decoration:underline;text-decoration-color:#b2bbb1;text-underline-offset:4px;padding-left:10px;padding-right:10px}
+.button.quiet:hover{color:var(--forest);background:var(--forest-wash)}
+.button-arrow{font-size:1rem;font-weight:400;line-height:1}
+.support-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:23px;padding:16px 0 0;border-top:1px solid var(--line)}
+.support-copy{display:flex;gap:12px;align-items:flex-start}
+.support-dot{width:8px;height:8px;background:var(--clay);border-radius:50%;margin-top:7px;flex:none}
+.support-copy strong{display:block;font-size:.83rem;font-weight:680;margin-bottom:2px}
+.support-copy small{display:block;color:var(--muted);font-size:.79rem;line-height:1.45}
+.support-strip .button{min-height:39px;font-size:.79rem;padding:9px 12px;white-space:nowrap}
+#matches[aria-live],#selectorToast[aria-live]{}
+.toast{font-size:.82rem;color:var(--forest);margin-top:8px;min-height:1.3em}
+.results{margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}
+.results-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.results-head h3{font-family:var(--serif);font-size:1.55rem;font-weight:400;letter-spacing:-.025em;margin:2px 0 0}
+.result-count{font-size:.75rem;color:var(--muted);white-space:nowrap;padding-bottom:4px}
+.reason{display:grid;grid-template-columns:145px 1fr;gap:13px;padding:13px 15px;background:#f3f4ef;border-left:2px solid #839587;border-radius:2px;margin:0 0 16px}
+.reason strong{font-size:.75rem;letter-spacing:.025em;color:var(--forest);font-weight:730}
+.reason p{color:var(--ink-soft);font-size:.82rem;line-height:1.5;margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tool{position:relative;background:#fffefa;border:1px solid var(--line);border-radius:6px;padding:19px 20px 18px;display:flex;flex-direction:column;min-height:210px;gap:11px;transition:border-color .16s ease,box-shadow .16s ease}
+.tool:hover{border-color:#aab8ac;box-shadow:0 5px 18px rgba(36,57,42,.055)}
+.tool-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tool .meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.tag{font-size:.68rem;line-height:1.2;letter-spacing:.055em;text-transform:uppercase;font-weight:730;color:var(--forest);background:var(--forest-wash);padding:5px 7px;border-radius:2px}
+.tag.muted{color:#59645c;background:#f0f0eb}
+.tool h4{font-family:var(--serif);font-size:1.32rem;font-weight:400;line-height:1.14;letter-spacing:-.022em;margin:1px 0 0}
+.tool p{font-size:.85rem;line-height:1.55;color:var(--ink-soft);margin:0}
+.tool .button{align-self:flex-start;margin-top:auto;min-height:38px;font-size:.78rem;padding:8px 11px}
+.detail{margin-top:14px;padding:20px 21px;border:1px solid #c6d0c6;border-radius:5px;background:#f7f8f3}
+.detail h3{font-family:var(--serif);font-size:1.45rem;font-weight:400;line-height:1.15;margin:8px 0}
+.detail p{font-size:.86rem;line-height:1.55;color:var(--ink-soft);margin:8px 0}
+.detail ul{margin:10px 0 15px;padding-left:20px;color:var(--ink-soft);font-size:.86rem;line-height:1.6}
+.note{font-size:.78rem;color:var(--muted);line-height:1.5}
+.empty{padding:19px;background:#f4f4ef;border:1px dashed #c9cec5;border-radius:4px;color:var(--ink-soft);font-size:.87rem;line-height:1.5}
+.filter-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+.filter-row .field select{min-height:45px}
+.data-panel{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:start}
+.data-panel h2{font-family:var(--serif);font-size:1.28rem;font-weight:400;line-height:1.2;margin:0}
+.data-copy p{font-size:.82rem;line-height:1.55;color:var(--ink-soft);margin:0 0 9px}
+.data-copy p:last-child{margin:0}
+.data-copy .note{color:var(--muted)}
+.footer{border-top:1px solid var(--line);padding:20px 0 0;color:var(--muted);font-size:.76rem;display:flex;justify-content:space-between;gap:15px}
+.footer span:last-child{letter-spacing:.08em;text-transform:uppercase}
+.hidden{display:none!important}
+button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media(max-width:760px){
+ .wrap{padding:0 22px 50px}
+ .mast{min-height:76px}
+ .intro{grid-template-columns:1fr;gap:26px;padding:44px 0 28px}
+ h1{font-size:clamp(3rem,12vw,4.35rem)}
+ .principle{max-width:none;padding:14px 0 1px 15px}
+ .principle p{font-size:1.2rem;max-width:380px}
+ .panel{padding:23px 20px}
+ .panel-head h2{font-size:1.72rem}
+}
+@media(max-width:560px){
+ .wrap{padding:0 16px 38px}
+ .mast{min-height:70px}
+ .brand{font-size:.86rem}
+ .brand-mark{width:27px;height:27px}
+ .brand-copy small{font-size:.58rem}
+ .status{font-size:.58rem;padding:6px 7px;letter-spacing:.045em}
+ .intro{padding:37px 0 23px;gap:19px}
+ h1{font-size:clamp(2.75rem,13vw,3.65rem);margin-bottom:15px}
+ .lede{font-size:.97rem}
+ .alert{font-size:.76rem;padding:12px}
+ .tabs{display:flex;width:100%}
+ .tabs button{flex:1;padding:10px 8px;font-size:.78rem}
+ .panel{padding:20px 16px;border-radius:7px}
+ .panel-head{gap:10px;margin-bottom:18px}
+ .panel-head h2{font-size:1.55rem}
+ .panel-index{font-size:.95rem}
+ .filters,.filter-row{grid-template-columns:1fr;gap:12px}
+ .actions{gap:8px}
+ .actions .button:first-child{width:100%}
+ .actions .button.secondary{flex:1}
+ .actions .button.quiet{flex:0}
+ .support-strip{align-items:flex-start;flex-direction:column}
+ .support-strip .button{align-self:flex-start}
+ .results-head h3{font-size:1.35rem}
+ .result-count{font-size:.68rem}
+ .reason{grid-template-columns:1fr;gap:4px;padding:12px}
+ .cards{grid-template-columns:1fr}
+ .tool{min-height:190px;padding:17px}
+ .data-panel{grid-template-columns:1fr;gap:10px}
+ .footer{flex-direction:column;gap:7px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="mast">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-copy">Recovery Companion<small>Product Lab / Concept</small></span>
+    </a>
+    <div class="status">Expert review only</div>
+  </header>
+
+  <section class="intro" aria-labelledby="pageTitle">
+    <div>
+      <p class="eyebrow">A tool for a moment you choose</p>
+      <h1 id="pageTitle">A next step,<br><em>at your pace.</em></h1>
+      <p class="lede">Explore a small set of practical ideas and decide what, if anything, fits. No diagnosis, tracking, or pressure to choose.</p>
+    </div>
+    <aside class="principle">
+      <span class="micro-label">Designed to keep choice with you</span>
+      <p>Skip a prompt.<br>Change your mind.<br>Choose nothing.</p>
+      <small>This demo does not save your choices.</small>
+    </aside>
+  </section>
+
+  <p class="alert"><span class="alert-mark" aria-hidden="true">!</span><span><strong>Not for participant use.</strong> Draft exercises and safety language have not had qualified clinical or lived-experience review. This concept is not care and is not monitored.</span></p>
+
+  <nav class="tabs" role="tablist" aria-label="Choose how to explore">
+    <button id="selectorTab" role="tab" aria-selected="true" aria-controls="selectorPanel">Guided choice</button>
+    <button id="staticTab" role="tab" aria-selected="false" aria-controls="staticPanel">Browse toolkit</button>
+  </nav>
+
+  <section id="selectorPanel" class="panel" role="tabpanel" aria-labelledby="selectorTab">
+    <div class="panel-head">
+      <div>
+        <p class="eyebrow">01 / Guided choice</p>
+        <h2>Start with what matters right now.</h2>
+        <p class="sub">Choose only what you want to share. Every filter is optional, and you can change it at any time.</p>
+      </div>
+      <span class="panel-index" aria-hidden="true">01</span>
+    </div>
+
+    <div class="filters">
+      <div class="field"><label for="situation">What feels closest?</label><select id="situation"><option value="any">Skip this — show all options</option><option value="urge">I’m facing an urge</option><option value="overwhelm">I feel overwhelmed</option><option value="setback">I’m reflecting after a choice I want to change</option><option value="browse">I want to explore everything</option></select></div>
+      <div class="field"><label for="time">How much time feels available?</label><select id="time"><option value="any">No preference / skip</option><option value="short">A few minutes</option><option value="long">More time</option></select></div>
+      <div class="field"><label for="style">What kind of next step?</label><select id="style"><option value="any">No preference / skip</option><option value="practical">Something practical</option><option value="reflective">A moment to reflect</option><option value="person">A person or support resource</option></select></div>
+      <div class="field"><label for="tradition">Any approach preference?</label><select id="tradition"><option value="any">No preference / skip</option><option value="act">Values or acceptance-informed</option><option value="behavioral">Behavioral or planning-informed</option><option value="human">Human connection</option></select></div>
+    </div>
+
+    <div class="actions">
+      <button class="button" id="showMatches">Show options <span class="button-arrow" aria-hidden="true">→</span></button>
+      <button class="button secondary" id="clearChoice">Clear filters</button>
+      <button class="button quiet" id="exitSelector">Exit this flow</button>
+    </div>
+
+    <div class="support-strip">
+      <div class="support-copy"><span class="support-dot" aria-hidden="true"></span><span><strong>Prefer a person?</strong><small>See voluntary human-support options at any time. Nothing is contacted for you.</small></span></div>
+      <button class="button secondary" id="supportPath">Show support options <span aria-hidden="true">↗</span></button>
+    </div>
+
+    <div id="matches" aria-live="polite"></div>
+    <div class="toast" id="selectorToast" aria-live="polite"></div>
+  </section>
+
+  <section id="staticPanel" class="panel hidden" role="tabpanel" aria-labelledby="staticTab" aria-hidden="true">
+    <div class="panel-head">
+      <div>
+        <p class="eyebrow">02 / Browse toolkit</p>
+        <h2>Explore the full set.</h2>
+        <p class="sub">The same draft cards appear here and in Guided choice. Browse without answering questions.</p>
+      </div>
+      <span class="panel-index" aria-hidden="true">02</span>
+    </div>
+    <div class="support-strip">
+      <div class="support-copy"><span class="support-dot" aria-hidden="true"></span><span><strong>Looking for a person?</strong><small>Show the two voluntary human-support draft cards. No one is contacted.</small></span></div>
+      <button class="button secondary" id="staticSupport">Show support options <span aria-hidden="true">↗</span></button>
+    </div>
+    <p class="toast" id="staticSupportNotice" aria-live="polite"></p>
+    <div class="filter-row">
+      <div class="field"><label for="filterSituation">Filter by situation</label><select id="filterSituation"><option value="all">All situations</option><option value="urge">Urge</option><option value="overwhelm">Overwhelm</option><option value="setback">Setback reflection</option><option value="browse">Explore</option></select></div>
+      <div class="field"><label for="filterStyle">Filter by kind</label><select id="filterStyle"><option value="all">All kinds</option><option value="practical">Practical step</option><option value="reflective">Reflection</option><option value="person">Human support</option></select></div>
+    </div>
+    <div id="staticCards" class="cards"></div>
+    <div id="staticDetail" aria-live="polite"></div>
+  </section>
+
+  <section class="panel data-panel" aria-labelledby="dataHeading">
+    <h2 id="dataHeading">A considered data boundary.</h2>
+    <div class="data-copy">
+      <p>The prototype code makes no network requests and uses no account, analytics, backend, or browser storage. Choices stay in page memory and clear when you reload. Please don’t enter personal or sexual-history details.</p>
+      <p class="note">The public host may receive ordinary connection data when this page is served; this source-level check is not a privacy or security audit. The page is not monitored and cannot respond to a crisis. Human-support and emergency guidance require qualified review before participant use.</p>
+    </div>
+  </section>
+
+  <footer class="footer"><span>Recovery Companion — Product Lab · Prototype v0.3</span><span>Draft concept / Not participant-ready</span></footer>
+</main>
+<script>
+
+const tools = [
+ {id:'C01',title:'Pause and orient',purpose:'Take a brief pause; notice a few neutral things in the present environment; decide whether to continue or choose another option.',situations:['urge','overwhelm'],style:'practical',tradition:'behavioral',minutes:2,caution:'Keep eyes-open and stop options explicit. Do not assume breath focus or body scanning is calming for everyone.',steps:['Pause for a moment if you choose.','Notice a few neutral details in the room or around you. You can skip this step.','Choose: continue, try another option, or leave.']},
+ {id:'C02',title:'Name the experience lightly',purpose:'Choose a simple label such as “urge,” “stress,” or “uncertainty,” without explaining its cause.',situations:['urge','overwhelm'],style:'reflective',tradition:'act',minutes:2,caution:'No trauma probing or causal story. Skip or stop if labeling increases distress.',steps:['Choose a word from the examples, or use your own neutral word.','You do not need to explain why it is here.','Choose a next step, or stop.']},
+ {id:'C03',title:'Make room for a choice',purpose:'Distinguish having an urge or thought from acting on it; identify one action available in the next few minutes.',situations:['urge'],style:'reflective',tradition:'act',minutes:3,caution:'A pause does not guarantee control. If this framing does not fit, choose another option.',steps:['Notice that a thought or urge is present, if that feels useful.','Name one action you could choose in the next few minutes.','You remain free to choose a different option or none.']},
+ {id:'C04',title:'Change one condition',purpose:'Choose a small, reversible environmental adjustment you consider helpful.',situations:['urge','overwhelm'],style:'practical',tradition:'behavioral',minutes:2,caution:'No surveillance, coercion, or restriction by default. Choose only an adjustment that feels safe and workable.',steps:['Consider whether one small change to your surroundings would help.','Examples: move to another room, put a device aside, or switch activities.','You can keep things as they are.']},
+ {id:'C05',title:'Next-step intention',purpose:'Make a short if/then plan for a situation you choose.',situations:['urge','overwhelm'],style:'practical',tradition:'behavioral',minutes:3,caution:'No compulsory abstinence goal. A plan is an option, not a guarantee.',steps:['Choose a situation you want to prepare for, or skip.','Complete: “If that happens, I could try…”','Edit the plan until it feels like your choice, or discard it.']},
+ {id:'C06',title:'Values-to-action micro-step',purpose:'Choose one personally meaningful value and a small action that expresses it today.',situations:['urge','setback','browse'],style:'reflective',tradition:'act',minutes:4,caution:'Do not impose moral, religious, relationship, or abstinence values. Skip the values prompt if it feels pressuring.',steps:['Choose a value from a menu, name one yourself, or skip.','Choose one small action that could express it today.','The action can be unrelated to this situation.']},
+ {id:'C07',title:'Nonpunitive review',purpose:'Reflect on what happened before a choice, what you needed, and one adjustment you choose.',situations:['setback'],style:'reflective',tradition:'behavioral',minutes:5,caution:'Stop if this becomes self-attack or rumination. One event does not prove a diagnosis or failed recovery.',steps:['If useful, consider what was happening just before. No graphic detail is needed.','Ask: “What might I have needed?” You can leave this unanswered.','Choose one adjustment for next time, or choose none.']},
+ {id:'C08',title:'Boundary reminder',purpose:'Privately review a boundary you wrote or selected in advance; revise or set it aside if you choose.',situations:['urge','setback'],style:'practical',tradition:'behavioral',minutes:2,caution:'Use only a user-authored boundary. It is flexible and not a moral test. Branded materials are not included.',steps:['Recall or open a boundary you chose for yourself.','Decide whether it still fits. You may revise or set it aside.','Choose a next step, or leave.']},
+ {id:'C09',title:'Contact menu',purpose:'Choose whether to look for an existing trusted person, independent peer meeting, clinician directory, or none.',situations:['urge','overwhelm','setback','browse'],style:'person',tradition:'human',minutes:3,caution:'This demo does not contact anyone or verify a specific resource. Peer support is not clinical care.',steps:['Choose whether human connection would help right now.','Consider a person or support resource you already trust.','No contact is made by this prototype.']},
+ {id:'C10',title:'Meaningful-life action',purpose:'Choose a brief, ordinary activity unrelated to monitoring or suppressing thoughts.',situations:['overwhelm','setback','browse'],style:'practical',tradition:'act',minutes:5,caution:'This is not a requirement to distract yourself or eliminate an urge. Adapt for access, disability, and context.',steps:['Choose one ordinary activity that feels available to you.','Make it small enough to start, or choose rest.','The goal is simply to choose what comes next.']},
+ {id:'C11',title:'Preference reset',purpose:'Switch among practical, reflective, or human-support choices.',situations:['urge','overwhelm','setback','browse'],style:'practical',tradition:'behavioral',minutes:1,caution:'A product correction option, not a therapeutic exercise. Declining is always allowed.',steps:['Ask: “Would another kind of option fit better?”','Choose practical, reflective, human support, browse, or exit.','No explanation is required.']},
+ {id:'C12',title:'Stop or seek support',purpose:'Leave this flow and choose a professional or emergency support route if needed.',situations:['urge','overwhelm','setback','browse'],style:'person',tradition:'human',minutes:1,caution:'Exact safety wording and local resources require qualified review. This prototype is not monitored and cannot respond.',steps:['You can leave this prototype at any time.','If you need help, choose a trusted person, qualified professional, or appropriate local emergency/crisis service.','This prototype does not send alerts or provide crisis response.']}
+];
+const scenarioLabels={urge:'Urge',overwhelm:'Overwhelm',setback:'Setback reflection',browse:'Explore'};
+const styleLabels={practical:'Practical step',reflective:'Reflection',person:'Human support'};
+const traditionLabels={act:'Values/acceptance-informed',behavioral:'Behavioral/planning-informed',human:'Human connection'};
+const selectorPanel=document.getElementById('selectorPanel'),staticPanel=document.getElementById('staticPanel');
+function setMode(mode){const isSelector=mode==='selector';const selectorTab=document.getElementById('selectorTab'),staticTab=document.getElementById('staticTab');selectorTab.setAttribute('aria-selected',String(isSelector));staticTab.setAttribute('aria-selected',String(!isSelector));selectorTab.tabIndex=isSelector?0:-1;staticTab.tabIndex=isSelector?-1:0;selectorPanel.classList.toggle('hidden',!isSelector);staticPanel.classList.toggle('hidden',isSelector);selectorPanel.setAttribute('aria-hidden',String(!isSelector));staticPanel.setAttribute('aria-hidden',String(isSelector));if(!isSelector)renderStatic();}
+const modeTabs=[document.getElementById('selectorTab'),document.getElementById('staticTab')];modeTabs[0].tabIndex=0;modeTabs[1].tabIndex=-1;modeTabs[0].addEventListener('click',()=>setMode('selector'));modeTabs[1].addEventListener('click',()=>setMode('static'));modeTabs.forEach((tab,index)=>tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight'||event.key==='ArrowDown')next=(index+1)%modeTabs.length;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')next=(index+modeTabs.length-1)%modeTabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=modeTabs.length-1;else return;event.preventDefault();modeTabs[next].focus();setMode(next===0?'selector':'static');}));
+function cardHTML(tool){return `<article class="tool"><div class="tool-top"><div class="meta"><span class="tag">${tool.minutes} min</span><span class="tag muted">Draft / unreviewed</span><span class="tag muted">${styleLabels[tool.style]}</span></div><span class="panel-index" aria-hidden="true">${tool.id.slice(1)}</span></div><h4>${tool.title}</h4><p>${tool.purpose}</p><button class="button secondary" data-open="${tool.id}" aria-label="See draft steps for ${tool.title}">See draft steps <span class="button-arrow" aria-hidden="true">→</span></button></article>`}
+function bindOpen(root,detailTarget){root.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openDetail(button.dataset.open,detailTarget)));}
+function openDetail(id,target){const t=tools.find(x=>x.id===id);if(!t)return;target.innerHTML=`<section class="detail" tabindex="-1"><div class="meta"><span class="tag">${t.id}</span><span class="tag muted">${t.minutes} min draft</span><span class="tag muted">${traditionLabels[t.tradition]}</span></div><h3 style="margin-top:8px">${t.title}</h3><p>${t.purpose}</p><strong>Draft steps for review</strong><ul>${t.steps.map(s=>`<li>${s}</li>`).join('')}</ul><p><strong>Reviewer caution:</strong> ${t.caution}</p><p class="note">Draft only. Not clinically or lived-experience reviewed. The tradition label is inspiration, not evidence that this exercise is validated for this population.</p><button class="button quiet" data-close-detail>Close details</button></section>`;target.querySelector('[data-close-detail]').addEventListener('click',()=>{target.innerHTML='';});}
+function renderStatic(){const situation=document.getElementById('filterSituation').value,style=document.getElementById('filterStyle').value;const list=tools.filter(t=>(situation==='all'||t.situations.includes(situation))&&(style==='all'||t.style===style));const root=document.getElementById('staticCards');root.innerHTML=list.map(t=>cardHTML(t)).join('')||'<p class="empty">No draft tools match these filters. Clear a filter or view all tools.</p>';bindOpen(root,document.getElementById('staticDetail'));}
+document.getElementById('filterSituation').addEventListener('change',renderStatic);document.getElementById('filterStyle').addEventListener('change',renderStatic);document.getElementById('staticSupport').addEventListener('click',()=>{document.getElementById('filterSituation').value='all';document.getElementById('filterStyle').value='person';renderStatic();document.getElementById('staticSupportNotice').textContent='Human-support draft cards shown. Nothing is sent.';});
+function selectMatches(){
+ const situation=document.getElementById('situation').value;
+ const time=document.getElementById('time').value;
+ const style=document.getElementById('style').value;
+ const tradition=document.getElementById('tradition').value;
+ let eligible=situation==='browse'?[...tools]:tools.filter(t=>situation==='any'||t.situations.includes(situation));
+ if(situation!=='browse'){
+  if(style!=='any')eligible=eligible.filter(t=>t.style===style);
+  if(tradition!=='any')eligible=eligible.filter(t=>t.tradition===tradition);
+  if(time==='short')eligible=eligible.filter(t=>t.minutes<=3);
+  if(time==='long')eligible=eligible.filter(t=>t.minutes>=3);
+ }
+ const chosen=[];
+ if(situation==='browse')chosen.push('browse all');
+ else if(situation!=='any')chosen.push(scenarioLabels[situation]);
+ if(time!=='any')chosen.push(time==='short'?'a few minutes':'more time');
+ if(style!=='any')chosen.push(styleLabels[style].toLowerCase());
+ if(tradition!=='any')chosen.push(traditionLabels[tradition]);
+ const why=situation==='browse'
+  ? 'You chose browse all. Every draft card is shown; no ranking is applied.'
+  : chosen.length
+   ? 'Filtered only by the choices you made: '+chosen.join(', ')+'. These are matches, not ranked recommendations.'
+   : 'No filters selected. The full draft library is shown.';
+ const root=document.getElementById('matches');
+ if(!eligible.length){
+  root.innerHTML='<div class="empty">No option matches that combination. Clear one or more filters, choose Browse all, or exit. No recommendation is inferred.</div>';
+  return;
+ }
+ root.innerHTML='<div class="results"><div class="results-head"><div><p class="eyebrow">Available options</p><h3>Choose any one, or none.</h3></div><span class="result-count">'+eligible.length+' of 12 drafts · not ranked</span></div><div class="reason"><strong>Why these options?</strong><p>'+why+'</p></div><div class="cards">'+eligible.map(t=>cardHTML(t)).join('')+'</div><p class="note" style="margin:14px 0 0">Every matching draft is shown. You can change filters, browse all, use the human-support route, or leave.</p><div id="selectorDetail"></div><div class="feedback"><label for="feedback">Optional: was this set useful enough to keep?</label><select id="feedback"><option value="">Skip</option><option>Yes</option><option>Partly</option><option>No</option></select><p class="note">Feedback stays in this page only and is cleared when you reload.</p></div></div>';
+ bindOpen(root,root.querySelector('#selectorDetail'));
+}
+document.getElementById('showMatches').addEventListener('click',selectMatches);
+document.getElementById('clearChoice').addEventListener('click',()=>{document.getElementById('situation').value='any';document.getElementById('time').value='any';document.getElementById('style').value='any';document.getElementById('tradition').value='any';document.getElementById('matches').innerHTML='';document.getElementById('selectorToast').textContent='Filters cleared. Show options to view the full library.';});
+document.getElementById('supportPath').addEventListener('click',()=>{document.getElementById('situation').value='any';document.getElementById('time').value='any';document.getElementById('style').value='person';document.getElementById('tradition').value='human';selectMatches();document.getElementById('selectorToast').textContent='Human-support and exit options shown. Nothing is sent.';});
+document.getElementById('exitSelector').addEventListener('click',()=>{document.getElementById('matches').innerHTML='';document.getElementById('selectorToast').textContent='You left the selection flow. No information was saved.';});
+renderStatic();
+
+</script>
+</body>
+</html>

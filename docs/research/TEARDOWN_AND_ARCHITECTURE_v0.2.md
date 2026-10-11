@@ -63,6 +63,12 @@ Code inspection of `prototype/context-selector-v0.1.html` shows that the form op
 
 These defaults weaken the claim that the choices are user-selected and can hide support by default. Before any test, change the context and preference fields so users actively choose them or skip them, always leave a visible browse/support/exit route, and avoid presenting the first three library records as “best” matches. Keep the prototype expert-only until reviewed.
 
+## Visual design exploration v0.3
+
+The v0.3 page applies a restrained editorial design system: warm neutral surfaces, forest-green action color, a single clay accent, serif display typography paired with familiar system controls, consistent spacing, quiet borders, and no decorative imagery. These are high-level cues toward clarity, restraint, precise craft, and honest materials; the page does not imitate any named designer or studio.
+
+The comparison remains unchanged: Guided choice and Browse toolkit use the same 12 draft cards. The prototype retains neutral defaults, full Browse all behavior, visible human-support routes in both views, a single explanation for why the set appears, local in-page state only, keyboard-operable tabs, and explicit review-only language. The design pass does not improve evidence quality or validate the content. It remains untested in a rendered browser and is not ready for participant exposure.
+
 ## What can proceed without clinical/lived-experience review
 
 **Proceed now:** public competitor/site teardown; rule and interaction design using synthetic examples; implementation and verification of local-only/no-network behavior; privacy threat modeling; accessibility review of prototype mechanics; checking licenses and avoiding copied curricula; drafting study materials and analysis code without recruiting.
