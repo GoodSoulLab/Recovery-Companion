@@ -20,6 +20,7 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Reviewer and formative test packet v0.1](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Context selector prototype v0.3](prototype/context-selector-v0.3.html)
 - [Context selector prototype v0.2](prototype/context-selector-v0.2.html)
 - [Context selector prototype v0.1](prototype/context-selector-v0.1.html)
 
