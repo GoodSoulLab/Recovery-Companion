@@ -20,6 +20,7 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Reviewer and formative test packet v0.1](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Context selector prototype v0.2](prototype/context-selector-v0.2.html)
 - [Context selector prototype v0.1](prototype/context-selector-v0.1.html)
 
 ## Non-negotiable boundaries
@@ -34,7 +35,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. The internal synthetic coverage test is complete and found that “Browse all” returns only three of twelve cards and some filter combinations return no options. The next safe step is to correct these mechanics and verify local-only behavior; no reviewer or participant spend is needed for that work. The prototype still contains unreviewed draft exercises and preselected defaults, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
+A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. Synthetic testing exposed v0.1 selector defects. Prototype v0.2 corrects the preselected filters, first-three cap, and Browse all behavior; offline logic checks confirmed 12/12 cards for neutral and Browse all, both human-support cards on the support route, and a clear fallback for incompatible filters. Static checks found no external dependencies, network calls, or persistent browser storage. These are mechanics checks, not accessibility, clinical, privacy-security, or user validation. The prototype still contains unreviewed draft exercises, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
 
 ## Licensing
 
