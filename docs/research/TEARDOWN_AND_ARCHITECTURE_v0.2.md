@@ -67,7 +67,7 @@ These defaults weaken the claim that the choices are user-selected and can hide 
 
 The v0.3 page applies a restrained editorial design system: warm neutral surfaces, forest-green action color, a single clay accent, serif display typography paired with familiar system controls, consistent spacing, quiet borders, and no decorative imagery. These are high-level cues toward clarity, restraint, precise craft, and honest materials; the page does not imitate any named designer or studio.
 
-The comparison remains unchanged: Guided choice and Browse toolkit use the same 12 draft cards. The prototype retains neutral defaults, full Browse all behavior, visible human-support and exit routes, a single explanation for why the set appears, local in-page state only, keyboard-operable tabs, and explicit review-only language. The design pass does not improve evidence quality or validate the content. It remains untested in a rendered browser and is not ready for participant exposure.
+The comparison remains unchanged: Guided choice and Browse toolkit use the same 12 draft cards. The prototype retains neutral defaults, full Browse all behavior, visible human-support routes in both views, a single explanation for why the set appears, local in-page state only, keyboard-operable tabs, and explicit review-only language. The design pass does not improve evidence quality or validate the content. It remains untested in a rendered browser and is not ready for participant exposure.
 
 ## What can proceed without clinical/lived-experience review
 
