@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-11  
 **Status:** Draft for independent review; not approved for participant use  
-**Companion prototype:** `recovery_companion_prototype_v0_1.html`  
+**Companion prototype:** [`prototype/context-selector-v0.1.html`](../../prototype/context-selector-v0.1.html)  
 **Decision:** Whether guided selection provides enough incremental value over the same static toolkit to justify a larger usability test.
 
 ## 1. Gate status
