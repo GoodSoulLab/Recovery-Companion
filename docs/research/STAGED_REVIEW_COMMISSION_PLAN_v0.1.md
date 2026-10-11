@@ -51,7 +51,7 @@ Request a fixed fee for document review, one 45–60 minute discussion, and one 
 
 Invite two adults who independently self-identify relevant lived experience and voluntarily sought behavior change. Seek different goals and perspectives; do not require diagnosis, abstinence, a recovery label, testimonials, or disclosure of personal histories. Do not identify or approach people through private support-group membership.
 
-Offer separate confidential sessions or a private written-feedback route. Avoid a group session for the first review so that partners are not asked to hear one another’s personal context. Each person may review the same exact materials and comment on:
+Offer separate separate private sessions or a written-feedback route; explain confidentiality limits before participation. Avoid a group session for the first review so that partners are not asked to hear one another’s personal context. Each person may review the same exact materials and comment on:
 
 - wording that feels blaming, pressuring, confusing, or falsely reassuring;
 - whether options feel rejectable and whether “none” remains a valid choice;
@@ -77,6 +77,10 @@ PCORI’s compensation guidance advises teams to consider role, responsibility, 
 - https://www.pcori.org/engagement-research/engagement-resources/foundational-expectations/dedicated-funds-engagement-partner-compensation
 
 **Planning estimate, not a compensation rate:** budget each partner for about 2–2.5 hours, plus reasonable agreed access expenses. Ask partners whether the scope and compensation are acceptable; adjust the scope, amount, or format before inviting them to begin. If two reviewers reveal conflicting or sharply divergent experiences, consider adding one or two partners before deciding the content is ready.
+
+## Feedback handling
+
+Store reviewer identities, contact details, and compensation records separately from feedback. Keep raw reviewer notes in a restricted, non-public location. Publish only issue-level summaries and design decisions in this repository. Do not publish quotations, names, or personal stories without separate, explicit permission. Ask reviewers to avoid including personal histories in their feedback; if such details arise, do not probe and remove unnecessary details from the working record.
 
 ## Phase 1 exit decision
 
@@ -114,7 +118,7 @@ Do not reduce lived-experience partner compensation to fit an arbitrary cap. If 
 
 **Subject:** Paid, time-limited clinical review of a recovery-support prototype
 
-I’m preparing a small, expert-only prototype for adults who voluntarily seek behavior change. I’m seeking a practicing clinician with relevant experience to review 12 original draft exercises, safety language, and fictional task prompts. This is a request for a bounded design review, not treatment delivery, efficacy validation, or a safety certification.
+I’m preparing a small, expert-only prototype for adults who voluntarily seek behavior change. I’m seeking a practicing clinician with relevant experience to review 12 draft exercise cards, safety language, and fictional task prompts. This is a request for a bounded design review, not treatment delivery, efficacy validation, or a safety certification.
 
 The proposed scope is a line-by-line review, one 45–60 minute discussion, and one bounded re-review after required edits. Please let me know your relevant experience, current license/jurisdiction, any conflicts, availability, fixed-fee or hourly terms, assumptions, and what you would exclude or require before accepting this scope. No participant data or personal histories are involved.
 
@@ -124,7 +128,7 @@ The proposed scope is a line-by-line review, one 45–60 minute discussion, and 
 
 I’m looking for two adults who have voluntarily sought to change an unwanted behavior to review a draft tool’s language and usability. You would review fictional, non-graphic scenarios and draft exercises, then share what feels clear, respectful, useful, pressuring, or missing. You do not need to share your own story, diagnosis, sexual history, or recovery label. Different goals are welcome.
 
-The review is private, approximately two hours including preparation, and compensated whether or not your feedback is positive. You may skip any item or stop. Before you decide, I’ll share the materials, exact tasks, compensation amount and timing, privacy limits, and how feedback will be used. No audio or video recording is planned. Would you like the details?
+Feedback is collected separately for each reviewer; approximately two hours including preparation. Compensation is provided whether or not feedback is positive. Confidentiality limits will be explained before you decide whether to participate. You may skip any item or stop. Before you decide, I’ll share the materials, exact tasks, compensation amount and timing, privacy limits, and how feedback will be used. No audio or video recording is planned. Would you like the details?
 
 ## Authorization still required
 
