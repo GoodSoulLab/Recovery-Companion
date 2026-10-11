@@ -69,6 +69,14 @@ The v0.3 page applies a restrained editorial design system: warm neutral surface
 
 The comparison remains unchanged: Guided choice and Browse toolkit use the same 12 draft cards. The prototype retains neutral defaults, full Browse all behavior, visible human-support routes in both views, a single explanation for why the set appears, local in-page state only, keyboard-operable tabs, and explicit review-only language. The design pass does not improve evidence quality or validate the content. It remains untested in a rendered browser and is not ready for participant exposure.
 
+## Interaction refinement v0.4
+
+The v0.3 registry was exhaustively evaluated over 192 combinations of the four ordinary inputs (situation, time, kind, and approach; Browse all was treated separately because it intentionally ignores other filters). One selected constraint produced a match in every case. With two constraints, 4/45 combinations were empty; with three, 28/81 were empty; and with all four, 36/54 were empty. The logic also classified three-minute cards as both “a few minutes” and “more time.” These are synthetic code-coverage counts, not user behavior or evidence about clinical fit.
+
+The v0.4 design makes situation the primary choice and places time, kind, and approach behind a closed optional-refinements disclosure. “A few minutes” is defined as up to 3 minutes and “a longer option” as 4–5 minutes. The human-support route remains visible in both comparison views, and its explanation says that the user requested support options rather than implying they selected hidden filters.
+
+Retesting the revised code shows 12/12 cards with no filters and Browse all, two human-support cards from each view, 9 short and 3 longer cards with no duration overlap, and a clear no-match fallback. Empty results remain possible when a person stacks incompatible optional refinements; the interface offers clear filters, Browse all, and exit. This does not establish that the filter model is intuitive or clinically appropriate. The browser-render, screen-reader, reviewer, and participant gates remain open.
+
 ## What can proceed without clinical/lived-experience review
 
 **Proceed now:** public competitor/site teardown; rule and interaction design using synthetic examples; implementation and verification of local-only/no-network behavior; privacy threat modeling; accessibility review of prototype mechanics; checking licenses and avoiding copied curricula; drafting study materials and analysis code without recruiting.
