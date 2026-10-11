@@ -115,6 +115,10 @@ I checked the actual prototype JavaScript with synthetic state in an in-memory D
 
 This verifies the selector mechanics and source-level data boundary only. It is not a browser-render/accessibility audit, security audit, content review, or evidence of participant benefit. The exact recovery exercises remain drafts and the page remains expert-review only.
 
+### Source-level accessibility review
+
+A focused source review found that the view controls declared ARIA tab roles without arrow-key navigation. v0.2 now uses roving tab focus and responds to Left/Right and Up/Down arrows plus Home/End; activation by click remains available. Sampled foreground/background pairs for body text, muted labels, tags, primary buttons, the alert, and the status badge exceed WCAG AA text contrast thresholds in a source-level calculation. This does not verify browser rendering, zoom/reflow, keyboard operation in an actual browser, or screen-reader announcements. Complete those checks before any participant exposure.
+
 ### Smallest meaningful user test (after review gates)
 
 If the synthetic screen passes and exact content receives qualified review, run a formative within-person comparison with 8–12 adults who voluntarily identify a behavior-change goal. Use identical reviewed cards in a curated static index and the transparent selector; counterbalance condition order and use task-matched, non-graphic scenarios to reduce learning effects. Do not collect diagnoses, explicit histories, free-text journals, or longitudinal behavior data.
