@@ -1,7 +1,7 @@
 # Prototype Privacy Threat Model v0.1
 
-**Status:** Source-level assessment of prototype v0.3; not a security audit, privacy review, or claim of confidentiality.  
-**Scope:** Static prototype in `prototype/context-selector-v0.3.html` and the later study boundary.  
+**Status:** Source-level assessment of prototype v0.4; not a security audit, privacy review, or claim of confidentiality.  
+**Scope:** Static prototype in `prototype/context-selector-v0.4.html` and the later study boundary.  
 **Purpose:** Make the data boundary concrete before any participant exposure.
 
 ## Decision
@@ -43,4 +43,4 @@ Before any participant-facing test:
 
 ## Verification completed
 
-A source-level scan of v0.3 found no `fetch`, `XMLHttpRequest`, `sendBeacon`, WebSocket, local/session storage, IndexedDB, or remote script/image/font/style references. The card registry and interaction code are static. This finding does not inspect browser runtime traffic, GitHub host logs, cookies, device telemetry, extensions, or security controls.
+A source-level scan of v0.4 found no `fetch`, `XMLHttpRequest`, `sendBeacon`, WebSocket, local/session storage, IndexedDB, or remote script/image/font/style references. The card registry and interaction code are static. This finding does not inspect browser runtime traffic, GitHub host logs, cookies, device telemetry, extensions, or security controls.
