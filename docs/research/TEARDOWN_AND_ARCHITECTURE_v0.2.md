@@ -98,6 +98,23 @@ I ran the existing prototype’s rule logic against the actual 12-card registry,
 
 **Result:** the current selector implementation fails its own “browse all” expectation and can hide options based on default filters and content order. Correct these mechanics before considering a participant comparison: make defaults neutral/optional, ensure browse-all truly exposes all cards, keep support/exit visible, explain when a filter narrows choices, and do not imply the first three items are the best fit. The static toolkit remains the safer and clearer prototype condition until this is fixed.
 
+### v0.2 correction and offline verification
+
+The v0.2 prototype changes the selectors to neutral “any” defaults, shows every matching card without ranking or a three-card cap, makes Browse all show the full library, and adds a visible human-support/exit route. Clear filters resets all choices. No selection is persisted.
+
+I checked the actual prototype JavaScript with synthetic state in an in-memory DOM stub and ran static source checks:
+
+| Check | Result |
+|---|---|
+| Neutral defaults, no filters | 12 of 12 cards shown |
+| Browse all | 12 of 12 cards shown |
+| Human-support route | C09 and C12 shown |
+| Contradictory narrow filters | Clear empty state with clear filters, Browse all, or exit routes |
+| Script syntax | Pass |
+| External dependencies / network calls / persistent browser storage | None found |
+
+This verifies the selector mechanics and source-level data boundary only. It is not a browser-render/accessibility audit, security audit, content review, or evidence of participant benefit. The exact recovery exercises remain drafts and the page remains expert-review only.
+
 ### Smallest meaningful user test (after review gates)
 
 If the synthetic screen passes and exact content receives qualified review, run a formative within-person comparison with 8–12 adults who voluntarily identify a behavior-change goal. Use identical reviewed cards in a curated static index and the transparent selector; counterbalance condition order and use task-matched, non-graphic scenarios to reduce learning effects. Do not collect diagnoses, explicit histories, free-text journals, or longitudinal behavior data.
@@ -108,7 +125,7 @@ Measure time to an acceptable option, independent fit rating, ability to explain
 
 ## Decision gates
 
-1. **Now:** correct the selector defects recorded above, then verify local-only behavior and accessibility. This can proceed without reviewer or participant spend.
+1. **Now:** v0.2 corrects the selector defects found in the synthetic run and passes the recorded offline logic/source checks. Next, review accessibility and privacy/security mechanics; these can proceed without participant spend. Do not treat the prototype as participant-ready.
 2. **Before exposure:** obtain qualified clinical and lived-experience review of exact cards, scenario prompts, consent/debrief, stop rules, and resource language; complete privacy, IP, accessibility, and ethics determination.
 3. **After the small test:** advance only if there is a clear directional fit or time advantage with preserved agency and no concerning harm signal. If not, prefer a static index, human-support navigation, or no product.
 4. **Commercial thesis:** remain unproven. Do not infer demand, retention, willingness to pay, clinical impact, or venture viability from a site teardown or usability test.
