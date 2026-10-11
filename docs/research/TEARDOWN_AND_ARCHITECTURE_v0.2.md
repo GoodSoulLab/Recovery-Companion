@@ -57,6 +57,12 @@ Safety rules are exclusions and guardrails, not a clinical assessment. If nothin
 
 The v0.1 prototype is deterministic, but deterministic matching alone does not establish better help. The selector can become an extra questionnaire that filters out useful options. If an organized index with “helpful for” labels performs as well, use the index. A simpler, legible interface is the default until selection advantage is demonstrated.
 
+### Specific v0.1 implementation findings
+
+Code inspection of `prototype/context-selector-v0.1.html` shows that the form opens with **urge**, **a few minutes**, and **practical step** already selected. The result function hard-filters against each selected field, then takes the first three eligible cards in library order with `slice(0,3)`; it does not rank options by evidence or suitability. The human-support cards are tagged as “person” and “human,” so the default “practical” selection filters them out. This is observable from the code, not user research.
+
+These defaults weaken the claim that the choices are user-selected and can hide support by default. Before any test, change the context and preference fields so users actively choose them or skip them, always leave a visible browse/support/exit route, and avoid presenting the first three library records as “best” matches. Keep the prototype expert-only until reviewed.
+
 ## What can proceed without clinical/lived-experience review
 
 **Proceed now:** public competitor/site teardown; rule and interaction design using synthetic examples; implementation and verification of local-only/no-network behavior; privacy threat modeling; accessibility review of prototype mechanics; checking licenses and avoiding copied curricula; drafting study materials and analysis code without recruiting.
