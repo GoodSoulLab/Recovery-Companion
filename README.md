@@ -20,7 +20,8 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Public experience teardown and minimum intervention architecture v0.2](docs/research/TEARDOWN_AND_ARCHITECTURE_v0.2.md)
 - [Prototype privacy threat model v0.1](docs/research/PRIVACY_THREAT_MODEL_v0.1.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
-- [Reviewer and formative test packet v0.1](docs/research/REVIEW_PROTOCOL_v0.1.md)
+- [Reviewer and formative test protocol v0.2](docs/research/REVIEW_PROTOCOL_v0.2.md)
+- [Reviewer and formative test packet v0.1 (superseded draft)](docs/research/REVIEW_PROTOCOL_v0.1.md)
 - [Context selector prototype v0.4](prototype/context-selector-v0.4.html)
 - [Context selector prototype v0.3](prototype/context-selector-v0.3.html)
 - [Context selector prototype v0.2](prototype/context-selector-v0.2.html)
@@ -38,7 +39,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-A public-site walkthrough of Relay and SMART is documented; the authenticated Relay, Fortify, and Brainbuddy app experiences remain untested. Synthetic testing exposed v0.1 selector defects. Prototype v0.2 corrects the preselected filters, first-three cap, and Browse all behavior; offline logic checks confirmed 12/12 cards for neutral and Browse all, both human-support cards on the support route, and a clear fallback for incompatible filters. Static checks found no external dependencies, network calls, or persistent browser storage. These are mechanics and source-level checks, not browser/screen-reader accessibility, clinical, privacy-security, or user validation. The prototype still contains unreviewed draft exercises, so it remains expert-review only. No participant exposure or sensitive research until qualified clinical and lived-experience review, privacy/security, IP, accessibility, and ethics gates are met.
+Prototype v0.4 makes situation the primary choice and moves time, kind, and approach into optional refinements. A 192-combination synthetic sweep found increasing empty-result rates as constraints were stacked, which motivated this progressive design. Synthetic checks show 12/12 cards with neutral and Browse all settings, two support options in each view, and non-overlapping time bands. These are mechanics checks, not evidence of usability, clinical fit, or benefit. No rendered-browser or screen-reader review, independent review, participant test, or authenticated competitor walkthrough is claimed. The current reviewer/test protocol is v0.2 and remains a draft; no reviewers or participants have been contacted. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
 
 ## Licensing
 
