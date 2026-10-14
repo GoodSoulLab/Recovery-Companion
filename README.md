@@ -4,6 +4,11 @@ Research and prototype workspace for evaluating whether a privacy-conscious, cli
 
 **Status:** Product discovery. No clinical validation, participant findings, or commercial validation. Draft exercises are for qualified review only.
 
+## Copy-ready hosting file
+
+- [index.html](index.html) is the self-contained static page for direct hosting; no build step, remote font, analytics, or app backend is required.
+- [Resource bank prototype v1.0](prototype/resource-bank-v1.0.html) is the versioned source. It uses Good Soul Dojo’s cream, navy, rounded-card, and sans-serif visual language while preserving the resource-bank content and safety boundaries.
+
 ## Current decision
 
 Test a narrow hypothesis before making a venture or product commitment: does a compact, evidence-labeled resource bank help adults voluntarily seeking change find an acceptable next step and understand clinical versus peer support better than a plain resource list or the routes they already use?
@@ -27,7 +32,8 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Reviewer and formative test protocol v0.3 (superseded)](docs/research/REVIEW_PROTOCOL_v0.3.md)
 - [Reviewer and formative test protocol v0.2 (superseded)](docs/research/REVIEW_PROTOCOL_v0.2.md)
 - [Reviewer and formative test packet v0.1 (superseded)](docs/research/REVIEW_PROTOCOL_v0.1.md)
-- [Resource bank prototype v0.9 (current working design; unvalidated)](prototype/resource-bank-v0.8.html)
+- [Resource bank prototype v1.0 (current working design; unvalidated)](prototype/resource-bank-v1.0.html)
+- [Resource bank prototype v0.9 (superseded)](prototype/resource-bank-v0.9.html)
 - [Resource bank UX decision v0.3 and falsification experiment](docs/design/RESOURCE_BANK_UX_DECISION_v0.3.md)
 - [Outbound support link research and UX recommendation v0.1](docs/research/OUTBOUND_SUPPORT_LINKS_v0.1.md)
 - [Resource bank prototype v0.7 (superseded)](prototype/resource-bank-v0.7.html)
@@ -53,7 +59,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-Prototype v0.9 is a moment-led, ten-resource pocket guide. Four voluntary entry choices route to an evidence-labeled shelf; people can also browse all resources directly. Optional browser-local saving stores saved resource IDs only. The UX decision v0.3 challenges the routing hypothesis, compares it with a flat shelf, and defines an eight-person formative falsification study. The new research note separates outbound pathways for peer meetings, sponsorship, and professional care, with source limits and no-referrer link behavior. This is a working design direction, not validated user research, clinical approval, or evidence of benefit. Source checks cover routes, filters, storage scope, reduced motion, direct HTTPS links, and no network requests. Browser/assistive-technology, clinical, lived-experience, privacy/security, ethics, accessibility, and IP reviews remain open. Do not expose exercise content to participants until the documented gates are resolved.
+Prototype v1.0 is a Dojo-inspired, moment-led, ten-resource pocket guide with a self-contained root `index.html` for hosting. Four voluntary entry choices route to an evidence-labeled shelf; people can also browse all resources directly. Optional browser-local saving stores saved resource IDs only. The UX decision v0.3 challenges the routing hypothesis, compares it with a flat shelf, and defines an eight-person formative falsification study. The new research note separates outbound pathways for peer meetings, sponsorship, and professional care, with source limits and no-referrer link behavior. This is a working design direction, not validated user research, clinical approval, or evidence of benefit. Source checks cover routes, filters, storage scope, reduced motion, direct HTTPS links, and no network requests. Browser/assistive-technology, clinical, lived-experience, privacy/security, ethics, accessibility, and IP reviews remain open. Do not expose exercise content to participants until the documented gates are resolved.
 
 ## Licensing
 
