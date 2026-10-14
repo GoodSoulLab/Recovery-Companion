@@ -27,7 +27,9 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Reviewer and formative test protocol v0.3 (superseded)](docs/research/REVIEW_PROTOCOL_v0.3.md)
 - [Reviewer and formative test protocol v0.2 (superseded)](docs/research/REVIEW_PROTOCOL_v0.2.md)
 - [Reviewer and formative test packet v0.1 (superseded)](docs/research/REVIEW_PROTOCOL_v0.1.md)
-- [Resource bank prototype v0.7 (current)](prototype/resource-bank-v0.7.html)
+- [Resource bank prototype v0.8 (current working design; unvalidated)](prototype/resource-bank-v0.8.html)
+- [Resource bank UX decision v0.2 and falsification experiment](docs/design/RESOURCE_BANK_UX_DECISION_v0.2.md)
+- [Resource bank prototype v0.7 (superseded)](prototype/resource-bank-v0.7.html)
 - [Resource bank UX decision v0.1](docs/design/RESOURCE_BANK_UX_DECISION_v0.1.md)
 - [Context selector prototype v0.6 (superseded)](prototype/context-selector-v0.6.html)
 - [UX simplification notes v0.2 (superseded)](docs/design/UX_SIMPLIFICATION_NOTES_v0.2.md)
@@ -50,7 +52,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-Prototype v0.7 is a nine-resource, browsable bank covering in-the-moment skills, nonpunitive reflection, voluntary human support, SAA sponsor-fit guidance, and clinician/meeting directories. It labels direct CSB/PPU treatment research as early, broader DBT evidence as indirect, IFS-inspired content as exploratory, and fellowship guidance as nonclinical. Saved resource IDs only are opt-in in this browser's local storage; no notes, search, choices, or behavior logs are stored. Source checks confirm valid JavaScript, nine entries, reduced-motion support, and no fetch/XMLHttpRequest code. Owner feedback motivated the pivot from the previous guided selector; it is not user research. Browser rendering, keyboard, zoom/reflow, screen-reader, clinical, lived-experience, ethics, privacy/security, and IP review remain open. No reviewers or participants have been contacted. Protocol v0.5 remains a draft. Do not expose the content to participants until all documented gates are resolved.
+Prototype v0.8 is a moment-led, nine-resource pocket guide. Four voluntary entry choices route to an evidence-labeled shelf; people can also browse all resources directly. Optional browser-local saving stores saved resource IDs only. The UX decision v0.2 challenges the routing hypothesis, compares it with a flat shelf, and defines an eight-person formative falsification study. This is a working design direction, not validated user research, clinical approval, or evidence of benefit. Source checks cover routes, filters, storage scope, reduced motion, and no network requests. Browser/assistive-technology, clinical, lived-experience, privacy/security, ethics, accessibility, and IP reviews remain open. Do not expose exercise content to participants until the documented gates are resolved.
 
 ## Licensing
 
