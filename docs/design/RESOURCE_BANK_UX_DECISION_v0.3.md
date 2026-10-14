@@ -24,7 +24,7 @@ The interface aims to feel calm without making the topic cute or minimizing dist
 - The resource shelf remains directly available, with category filters, search, expandable cards, evidence explanations, cautions, and source links.
 - Optional saving is renamed “My pocket” and persists only saved resource IDs. It does not collect notes, contact details, histories, searches, choices, or behavior records. The interface states that local storage is not encrypted and can be visible to someone using the same browser profile or device.
 - The sponsor resource preserves choice and pacing; it frames sponsors as peer guides and separates their role from licensed clinical care.
-- Meeting, peer-sponsor, and professional-care pathways now have separate cards and direct links to official organizational sources. Each path names what its directory establishes and its limits; none is presented as a vetted match or endorsement.
+- Meeting, peer-sponsor, and professional-care pathways now have separate cards and direct links to official organizational sources. Each path names what its directory establishes and its limits; none is presented as a vetted match or endorsement. The CSAT search is framed as optional language, and destination-site privacy practices remain outside the guide’s control.
 - External links use descriptive organization names, a short expectation-setting note, `noopener noreferrer`, and no referrer. The guide does not add location/search parameters or share its saved-resource IDs through those links.
 - IFS-inspired content is explicitly optional and exploratory. It does not invite trauma memory work and is not presented as established care for this use.
 
