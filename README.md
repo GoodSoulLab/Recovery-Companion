@@ -6,7 +6,7 @@ Research and prototype workspace for evaluating whether a privacy-conscious, cli
 
 ## Current decision
 
-Test a narrow hypothesis before making a venture or product commitment: does a transparent selector, using only a user-selected situation and preferences, help people choose an acceptable next action faster or with better fit than the same options in a well-organized static toolkit?
+Test a narrow hypothesis before making a venture or product commitment: does a compact, evidence-labeled resource bank help adults voluntarily seeking change find an acceptable next step and understand clinical versus peer support better than a plain resource list or the routes they already use?
 
 The current public-source evidence shows that integration alone is not a defensible novelty claim. Relay publicly describes plans, therapist-designed lessons, check-ins, urge/trigger logging, and peer support; SMART Recovery offers free tools and meetings. These are publisher claims, not authenticated app tests, independent audits, or clinical outcome evidence.
 
@@ -21,12 +21,16 @@ The current public-source evidence shows that integration alone is not a defensi
 - [Prototype privacy threat model v0.1](docs/research/PRIVACY_THREAT_MODEL_v0.1.md)
 - [Reviewer sourcing brief v0.1](docs/research/REVIEWER_SOURCING_BRIEF_v0.1.md)
 - [Staged review commission plan v0.1](docs/research/STAGED_REVIEW_COMMISSION_PLAN_v0.1.md)
-- [Reviewer and formative test protocol v0.4 (current draft)](docs/research/REVIEW_PROTOCOL_v0.4.md)
+- [Reviewer and formative test protocol v0.5 (current draft)](docs/research/REVIEW_PROTOCOL_v0.5.md)
+- [Resource bank evidence brief v0.1](docs/research/RESOURCE_BANK_EVIDENCE_BRIEF_v0.1.md)
+- [Reviewer and formative test protocol v0.4 (superseded)](docs/research/REVIEW_PROTOCOL_v0.4.md)
 - [Reviewer and formative test protocol v0.3 (superseded)](docs/research/REVIEW_PROTOCOL_v0.3.md)
 - [Reviewer and formative test protocol v0.2 (superseded)](docs/research/REVIEW_PROTOCOL_v0.2.md)
 - [Reviewer and formative test packet v0.1 (superseded)](docs/research/REVIEW_PROTOCOL_v0.1.md)
-- [Context selector prototype v0.6 (current)](prototype/context-selector-v0.6.html)
-- [UX simplification notes v0.2](docs/design/UX_SIMPLIFICATION_NOTES_v0.2.md)
+- [Resource bank prototype v0.7 (current)](prototype/resource-bank-v0.7.html)
+- [Resource bank UX decision v0.1](docs/design/RESOURCE_BANK_UX_DECISION_v0.1.md)
+- [Context selector prototype v0.6 (superseded)](prototype/context-selector-v0.6.html)
+- [UX simplification notes v0.2 (superseded)](docs/design/UX_SIMPLIFICATION_NOTES_v0.2.md)
 - [Context selector prototype v0.5](prototype/context-selector-v0.5.html)
 - [UX simplification notes v0.1 (superseded)](docs/design/UX_SIMPLIFICATION_NOTES_v0.1.md)
 - [Context selector prototype v0.4](prototype/context-selector-v0.4.html)
@@ -46,7 +50,7 @@ The current public-source evidence shows that integration alone is not a defensi
 
 ## Current gate
 
-Prototype v0.6 keeps the one-moment entry and two fixed, explainable starter drafts, with a warmer visual system, clearer hierarchy, subtle interaction feedback, and a separate browse-all route. The 12 draft exercises remain unchanged. The intended feel is considered and human without recovery streaks, pressure, or treatment-like authority. These are design proposals, not validated conclusions. The starter pair can bias choices or feel too directive; the richer visual treatment can also imply more authority than the unreviewed content merits. Source checks confirm one HTML document, 12 draft exercises, valid JavaScript syntax, and no page-level network or browser-storage APIs. Browser rendering, keyboard, zoom/reflow, and screen-reader review remain unverified. No reviewers or participants have been contacted. Protocol v0.4 remains a draft. Do not expose exercise content to participants until the clinical, lived-experience, ethics, privacy/security, IP, and accessibility gates documented there are resolved.
+Prototype v0.7 is a nine-resource, browsable bank covering in-the-moment skills, nonpunitive reflection, voluntary human support, SAA sponsor-fit guidance, and clinician/meeting directories. It labels direct CSB/PPU treatment research as early, broader DBT evidence as indirect, IFS-inspired content as exploratory, and fellowship guidance as nonclinical. Saved resource IDs only are opt-in in this browser's local storage; no notes, search, choices, or behavior logs are stored. Source checks confirm valid JavaScript, nine entries, reduced-motion support, and no fetch/XMLHttpRequest code. Owner feedback motivated the pivot from the previous guided selector; it is not user research. Browser rendering, keyboard, zoom/reflow, screen-reader, clinical, lived-experience, ethics, privacy/security, and IP review remain open. No reviewers or participants have been contacted. Protocol v0.5 remains a draft. Do not expose the content to participants until all documented gates are resolved.
 
 ## Licensing
 
